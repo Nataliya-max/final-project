@@ -1,7 +1,7 @@
+// Navbar.jsx
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import NavLinks from './NavLinks';
 import './navbar.css';
-
 
 const Navbar = () => {
   const [burgerClass, setBurgerClass] = useState('burger-bar unclicked');
@@ -14,25 +14,14 @@ const Navbar = () => {
     setIsMenuClicked(!isMenuClicked);
   };
 
-  const links = [
-    { to: '/home', label: 'HOME' },
-    { to: '/shop', label: 'SHOP' },
-    { to: '/service', label: 'SERVICE' },
-    { to: '/cart', label: 'CART' }
-  ];
-
   return (
     <nav className="navbar">
       <div className="logo">LOGO</div>
 
       {/* Menú para escritorio */}
-      <ul className="nav-links">
-        {links.map(link => (
-          <li key={link.to}>
-            <Link to={link.to}>{link.label}</Link>
-          </li>
-        ))}
-      </ul>
+      <div className="nav-desktop">
+        <NavLinks />
+      </div>
 
       {/* Icono del menú hamburguesa */}
       <div className="burger-menu" onClick={updateMenu}>
@@ -43,15 +32,10 @@ const Navbar = () => {
 
       {/* Menú móvil */}
       <div className={menuClass}>
-        <ul>
-          {links.map(link => (
-            <li key={link.to} onClick={updateMenu}>
-              <Link to={link.to}>{link.label}</Link>
-            </li>
-          ))}
-        </ul>
+        <NavLinks onClick={updateMenu} />
       </div>
     </nav>
   );
 };
+
 export default Navbar;
