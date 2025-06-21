@@ -1,7 +1,6 @@
-// Navbar.jsx
-import React, { useState } from 'react';
-import NavLinks from './NavLinks';
+import { useState } from 'react';
 import './navbar.css';
+import NavLinks from './NavLinks';
 
 const Navbar = () => {
   const [burgerClass, setBurgerClass] = useState('burger-bar unclicked');
@@ -16,21 +15,20 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <div className="logo">LOGO</div>
+      <div className="title">
+        <h1>DigiDrive</h1>
+      </div>
 
-      {/* Menú para escritorio */}
       <div className="nav-desktop">
         <NavLinks />
       </div>
 
-      {/* Icono del menú hamburguesa */}
       <div className="burger-menu" onClick={updateMenu}>
         {[1, 2, 3].map((_, index) => (
           <div key={index} className={burgerClass}></div>
         ))}
       </div>
 
-      {/* Menú móvil */}
       <div className={menuClass}>
         <NavLinks onClick={updateMenu} />
       </div>

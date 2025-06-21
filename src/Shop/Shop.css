@@ -1,3 +1,138 @@
-h1 {
-    color: black;
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.cont {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.change {
+  background-color: #333; /* gris oscuro */
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.change:hover {
+  background-color: #007BFF; /* azul */
+}
+
+/* Adaptación a móviles */
+@media (max-width: 600px) {
+  .change {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+.product-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  width: 270px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.product-info h3 {
+  margin: 10px 0 5px;
+}
+
+.price-tag {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin: 5px 0 10px;
+}
+
+.add-button {
+  background-color: #007BFF; /* azul */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.add-button:hover {
+  background-color: #0056b3;
+}
+
+/* Botones responsive: dos por fila entre 390px y 800px */
+@media (min-width: 390px) and (max-width: 800px) {
+  .change {
+    width: calc(50% - 20px);
+    max-width: none;
+  }
+}
+
+/* En pantallas grandes: auto tamaño */
+@media (min-width: 801px) {
+  .change {
+    width: auto;
+  }
+}
+
+/* Tarjetas de productos */
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Tarjeta individual */
+.product-card {
+  padding: 2%;
+  flex-grow: 1;
+  flex-basis: 16%;
+  box-sizing: border-box;
+  background-color: white;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive tarjetas: adaptar columnas */
+@media (max-width: 1200px) {
+  .product-card {
+    flex-basis: 22%;
+  }
+}
+
+@media (max-width: 992px) {
+  .product-card {
+    flex-basis: 30%;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-card {
+    flex-basis: 45%;
+  }
+}
+
+@media (max-width: 500px) {
+  .product-card {
+    flex-basis: 90%;
+  }
+}
+
+/* Tipografías para textos */
+h3, h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
 }

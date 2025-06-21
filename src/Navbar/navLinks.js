@@ -1,9 +1,16 @@
+import { Link } from 'react-router-dom';
+import { navLinksdata } from './navLinksdata';
 
-const navLinks = [
-  { label: 'Inicio', to: '/' },
-  { label: 'Servicios', to: '/servicios' },
-  { label: 'Sobre Nosotros', to: '/sobre' },
-  { label: 'Contacto', to: '/contacto' },
-];
+const NavLinks = ({ onClick }) => (
+  <ul className="nav-links">
+    {navLinksdata.map((link) => (
+      <li key={link.to} onClick={onClick}>
+        <Link to={link.to}>{link.label}</Link>
+      </li>
+    ))}
+  </ul>
+);
 
-export default navLinks;
+export default NavLinks;
+
+
