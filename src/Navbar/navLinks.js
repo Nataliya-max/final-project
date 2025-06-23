@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { navLinksdata } from './navLinksdata';
 
+
 const NavLinks = ({ onClick }) => (
   <ul className="nav-links">
     {navLinksdata.map((link) => (
