@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { data } from './data';
 import './Home.css';
 
+
+
 function Home() {
     const [photoIndex, setPhotoIndex] = useState(0);
     const currentPhoto = data[photoIndex];

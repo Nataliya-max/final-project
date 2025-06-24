@@ -2,7 +2,6 @@ import { useState } from 'react';
 import './navbar.css';
 import NavLinks from './NavLinks';
 
-
 const Navbar = () => {
   const [burgerClass, setBurgerClass] = useState('burger-bar unclicked');
   const [menuClass, setMenuClass] = useState('menu hidden');

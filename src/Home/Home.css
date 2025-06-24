@@ -16,6 +16,7 @@
   padding: 2rem;
   gap: 2rem;
   flex-wrap: wrap;
+  
 }
 
 .text-column {
@@ -49,9 +50,9 @@
   margin-bottom: 1rem;
 }
 
-h2 {
+.container h2 {
   margin: 1rem 0;
-  color: #333;
+  color: #002b5c;
 }
 
 span {

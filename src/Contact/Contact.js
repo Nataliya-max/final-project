@@ -4,14 +4,14 @@ import './Contact.css';
 function Contact() {
   return (
     <div className="contact-container">
-      <h2>Contáctanos</h2>
+      <h2>Contact with us</h2>
       <form className="contact-form">
-        <input type="text" placeholder="Nombre" required />
-        <input type="text" placeholder="Apellido" required />
+        <input type="text" placeholder="Name..." required />
+        <input type="text" placeholder="Surname..." required />
         <input type="email" placeholder="E-mail" required />
-        <input type="tel" placeholder="Teléfono" required />
-        <textarea placeholder="Observaciones" rows="4" required></textarea>
-        <button type="submit">Enviar</button>
+        <input type="tel" placeholder="Movile phone" required />
+        <textarea placeholder="Wishes..." rows="4" required></textarea>
+        <button type="submit">Send</button>
       </form>
 
       <div className="social-icons">
