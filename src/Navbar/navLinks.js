@@ -13,5 +13,3 @@ const NavLinks = ({ onClick }) => (
 );
 
 export default NavLinks;
-
-
