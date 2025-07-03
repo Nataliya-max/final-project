@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './navbar.css';
-import NavLinks from './NavLinks';
+import NavbarLinks from './NavbarLinks';
+
 
 const Navbar = () => {
   const [burgerClass, setBurgerClass] = useState('burger-bar unclicked');
@@ -20,7 +21,7 @@ const Navbar = () => {
       </div>
 
       <div className="nav-desktop">
-        <NavLinks />
+       <NavbarLinks/>
       </div>
 
       <div className="burger-menu" onClick={updateMenu}>
@@ -30,7 +31,7 @@ const Navbar = () => {
       </div>
 
       <div className={menuClass}>
-        <NavLinks onClick={updateMenu} />
+       <NavbarLinks onClick={updateMenu} />
       </div>
     </nav>
   );
