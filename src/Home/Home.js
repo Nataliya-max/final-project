@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import { data } from './data';
 import './Home.css';
 
-
-
 function Home() {
     const [photoIndex, setPhotoIndex] = useState(0);
+    const [animateOut, setAnimateOut] = useState(false);
+    
+
     const currentPhoto = data[photoIndex];
 
     if (!currentPhoto) {
@@ -14,13 +15,22 @@ function Home() {
 
     const { id, image, description } = currentPhoto;
 
-    const handleNext = () => {
-        setPhotoIndex((prevIndex) => (prevIndex + 1) % data.length);
+    const changePhoto = (direction) => {
+        setAnimateOut(true); 
+        setTimeout(() => {
+            setPhotoIndex((prevIndex) => {
+                if (direction === 'next') {
+                    return (prevIndex + 1) % data.length;
+                } else {
+                    return (prevIndex - 1 + data.length) % data.length;
+                }
+            });
+            setAnimateOut(false); 
+        }, 500); 
     };
 
-    const handlePrev = () => {
-        setPhotoIndex((prevIndex) => (prevIndex - 1 + data.length) % data.length);
-    };
+    const handleNext = () => changePhoto('next');
+    const handlePrev = () => changePhoto('prev');
 
     return (
         <div className="wrapper">
@@ -35,7 +45,12 @@ function Home() {
             </div>
 
             <div className="container">
-                <img src={image} alt={`Imagen ${id}`} className="photo" />
+                <img
+                    key={id}
+                    src={image}
+                    alt={`Imagen ${id}`}
+                    className={`photo ${animateOut ? 'fade-out' : 'fade-in'}`}
+                />
                 <h2>{description}</h2>
                 <div className="buttons">
                     <button onClick={handlePrev}>Know</button>

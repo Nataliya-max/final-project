@@ -1,8 +1,10 @@
+import "./Cart.css";
 
-
-function Cart () {
-    return (
-        <div>Hiii</div>
+function Cart() {
+    return(
+        <div>
+Will be developed after Redux/Node course...
+        </div>
     )
 }
 

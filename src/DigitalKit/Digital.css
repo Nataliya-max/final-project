@@ -1,0 +1,63 @@
+.digital-kit-page {
+  background-color: #1e1e1e;
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  color: white;
+  font-family: Arial, sans-serif;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+font-size: 15px;
+ font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    font-size: 20px;
+     font-family: 'Montserrat', sans-serif;
+}
+
+.digital-kit-page .digital-kit {
+  width: 90%;
+  max-width: 800px;
+  margin-top: 30px;
+  border: 2px solid white;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.digital-kit-page .default {
+  padding: 20px;
+  background-color: #2a2a2a;
+  color: white;
+  cursor: pointer;
+  font-size: 1.2rem;
+  border-bottom: 1px solid white;
+  transition: background-color 0.3s;
+}
+
+.digital-kit-page .default:hover {
+  background-color: #3a3a3a;
+}
+
+.digital-kit-page .active {
+  padding: 20px;
+  background-color: #444;
+  color: white;
+  cursor: pointer;
+  font-size: 1.2rem;
+  border-bottom: 1px solid white;
+}
+
+.digital-kit-page .content {
+  background-color: #d3d3d3;
+  color: black;
+  padding: 20px;
+  font-size: 1.1rem;
+  border-bottom: 1px solid white;
+   font-family: 'Montserrat', sans-serif;
+}
