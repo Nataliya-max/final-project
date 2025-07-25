@@ -13,23 +13,13 @@ import Cart from './Cart/Cart';
 import Navbar from './Navbar/Navbar';
 import ShopItem from './Shop/ShopItem';
 import { DigitalKit } from './DigitalKit/DigitalKit';
-import LoaderPage from './Loader/LoaderPage';
-import { useState, useEffect } from 'react';
 
 
-function App() {
-
-  const [stateLoader, setStateLoader] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setStateLoader(false), 3000);
-    return () => clearTimeout(timer)
-  }, [])
+function App() { 
 
   return (
     <Router>
       <Navbar />
-       { stateLoader && <LoaderPage/>}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/shop"element={<Shop/>}/>
