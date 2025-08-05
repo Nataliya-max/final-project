@@ -12,8 +12,8 @@ function Buttons({ filteredItem, totalItems }) {
       <button className="change" onClick={() => filteredItem("power bank")}>Power Bank</button>
 
       <div className="cart-icon">
-        🛒
-        {totalItems > 0 && <span className="cart-count">{totalItems}</span>}
+        <span>🛒 </span>
+        {totalItems > 0 && <span className="cart-count"> {totalItems}</span>}
       </div>
     </div>
   );

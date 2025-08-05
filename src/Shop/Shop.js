@@ -1,12 +1,9 @@
-import React from 'react';
+
 import { useState } from 'react';
 import './Shop.css';
 import ShopItem from './ShopItem';
 import { shopListdata } from './shopListdata';
 import Buttons from './Buttons';
-
-
-
 
 function Shop() {
     
@@ -19,8 +16,7 @@ function Shop() {
     return(
         <div>
             <Buttons filteredItem={chosenItem} /> 
-            <ShopItem anyItem={item} />
-    
+            <ShopItem anyItem={item} />   
         </div>
     )
 }
